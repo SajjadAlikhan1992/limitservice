@@ -1,6 +1,5 @@
 package com.example.currencyexchangeservice.controller;
 
-import java.util.Currency;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -23,7 +22,6 @@ public class CurrencyExchangeController {
 	@Autowired
 	private CurrencyExchangeServices currencyExchangeServices;
 
-	// @GetMapping("/currencyexchange/from/{fromCurrency}/to/{toCurrency}")
 	@GetMapping("/currencyexchange")
 	public List<CurrencyExchange> fetchExchangeRates() {
 		List<CurrencyExchange> exchangeRates = currencyExchangeServices.fetchAllExchangeRates();
