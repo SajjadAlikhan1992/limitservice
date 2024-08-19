@@ -10,12 +10,18 @@ import com.example.limitservice.services.LimitServices;
 @RestController
 public class LimitServiceController {
 
-	@Autowired
-	LimitServices limitServices;
+    @Autowired
+    LimitServices limitServices;
 
-	@GetMapping("/limits")
+    @GetMapping("/limits")
+    public LimitService fetchLimits() {
+        return limitServices.getLimits();
+    }
+
+	@GetMapping("/alllimits")
 	public LimitService fetchLimits() {
 		return limitServices.getLimits();
 	}
+
 
 }
